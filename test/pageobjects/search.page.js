@@ -17,10 +17,6 @@ class SearchPage extends Page {
     this.searchInput.setValue(input);
     this.searchBtn.click();
   }
-
-  open() {
-    return super.open("https://www.ebay.com/");
-  }
 }
 
 export default new SearchPage();

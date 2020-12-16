@@ -1,4 +1,5 @@
 import SearchPage from "../pageobjects/search.page";
+import { waitForTextChanged } from "../helpers";
 
 describe("ebay search function", () => {
   before(() => {
@@ -19,6 +20,7 @@ describe("ebay search function", () => {
   });
 
   it("should update the search category", () => {
+    waitForTextChanged(SearchPage.category, "PC Laptops & Netbooks");
     expect(SearchPage.category).toHaveTextContaining("PC Laptops & Netbooks");
   });
 });

@@ -3,6 +3,7 @@ import WatchesPage from "../pageobjects/watches.page";
 describe("Watches page", () => {
   before(() => {
     WatchesPage.open();
+    WatchesPage.navigate();
   });
 
   it("should navigate to page and verify the title", () => {
